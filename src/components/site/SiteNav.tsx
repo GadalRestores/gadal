@@ -29,7 +29,7 @@ export function SiteNav() {
         scrolled ? "glass py-2 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)]" : "py-5",
       )}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+      <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <a href="#home" className="group flex items-center gap-3" aria-label={`${business.name} home`}>
           <img
             src={logo}
