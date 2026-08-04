@@ -56,18 +56,17 @@ export function CompareSlider({
         className="absolute inset-0 h-full w-full object-cover"
         draggable={false}
       />
-      <div className="absolute inset-0 overflow-hidden" style={{ width: `${position}%` }}>
-        <img
-          src={before}
-          alt={`${alt} — before restoration`}
-          loading="lazy"
-          width={1024}
-          height={768}
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{ width: containerRef.current?.clientWidth ?? undefined }}
-          draggable={false}
-        />
-      </div>
+      <img
+        src={before}
+        alt={`${alt} — before restoration`}
+        loading="lazy"
+        width={1024}
+        height={768}
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        draggable={false}
+      />
+
 
       <span className="pointer-events-none absolute left-4 top-4 rounded-full bg-background/80 px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-destructive backdrop-blur">
         Before
