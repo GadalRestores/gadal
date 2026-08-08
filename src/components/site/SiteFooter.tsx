@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram } from "lucide-react";
-import logoAsset from "@/assets/gadal-logo.png.asset.json";
+import logo from "@/assets/gadal-logo.png";
 import { business, navLinks } from "@/content/site";
 
 export function SiteFooter() {
@@ -11,7 +11,7 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src={logo}
                 alt=""
                 loading="lazy"
                 width={36}
