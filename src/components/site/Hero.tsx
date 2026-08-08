@@ -1,6 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
 import heroImage from "@/assets/hero-headlight.jpg";
-import logo from "@/assets/gadal-logo.png";
 import { business, trustBadges } from "@/content/site";
 
 /**
@@ -23,7 +22,7 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-4xl px-5 pb-24 pt-36 text-center lg:px-8">
         <img
-          src={logo}
+          src="/gadal-logo.png"
           alt={`${business.name} logo`}
           width={112}
           height={112}

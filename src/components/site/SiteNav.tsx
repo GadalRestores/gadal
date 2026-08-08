@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/gadal-logo.png";
 import { business, navLinks } from "@/content/site";
 import { cn } from "@/lib/utils";
 
@@ -32,7 +31,7 @@ export function SiteNav() {
       <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <a href="#home" className="group flex items-center gap-3" aria-label={`${business.name} home`}>
           <img
-            src={logo}
+            src="/gadal-logo.png"
             alt=""
             width={40}
             height={40}
