@@ -26,7 +26,7 @@ export function Hero() {
           alt={`${business.name} logo`}
           width={288}
           height={288}
-          className="mx-auto h-40 w-40 object-contain drop-shadow-[0_0_28px_oklch(0.85_0.23_130/0.45)] sm:h-56 sm:w-56 lg:h-64 lg:w-64"
+          className="mx-auto h-52 w-52 object-contain drop-shadow-[0_0_32px_oklch(0.85_0.23_130/0.5)] sm:h-64 sm:w-64 lg:h-80 lg:w-80"
         />
         <h1 className="mt-8 text-balance font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
           Clarity Restored, <span className="text-primary">Safety Secured.</span>

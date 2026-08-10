@@ -170,25 +170,25 @@ export const benefits = [
 
 export const reviews = [
   {
-    name: "Dom",
+    name: "Sevvy S",
     location: "Doylestown, PA",
     rating: 5,
     quote:
-      "I made the poor decision of trying the Repel Insect Repellent Spray as seen on IG (SMH). It made the headlights worst than they originally were. Thankfully, I called Gadal. Communication was great, punctual, and quality of work is top tier at a great price. I definitely recommend his services.",
+      "Amazing work! Professional, courteous and a true master of his craft. Highly recommend!",
   },
   {
-    name: "Bruce",
+    name: "Diego A",
     location: "Philadelphia, PA",
     rating: 5,
     quote:
-      "Gadal made my 20 year old headlights look nearly new again. He also restored my fog lamps at no extra cost because he felt they needed be done. He even comes to your location. So, don't buy new or replacement headlights before giving Gadal an opportunity to restore yours first. Excellent work, excellent price.",
+      "Amazing work, professionalism and great price. His work is a art work, and like any great painter he is the best at his craft. I'm extremely grateful.",
   },
   {
-    name: "Carole",
+    name: "Thomas S",
     location: "Burlington, NJ",
     rating: 5,
     quote:
-      "Gadal was very nice and professional. He showed up on time. He took before and after photos and the differences truly amazing. I would highly recommend Gadal.",
+      "Gadal Restores did an amazing job bringing back the lustre to my Acura RDX headlights! Gadal was on time and a very nice person, very knowledgeable about his work. The headlights look like new and the work was absolutely worth every penny! Highly recommend this mobile service for headlight restoration. Thanks Gadal!",
   },
 ];
 

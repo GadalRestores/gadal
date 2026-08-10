@@ -37,7 +37,7 @@ export function SiteNav() {
             height={72}
             className={cn(
               "transition-all duration-500",
-              scrolled ? "h-12 w-12" : "h-16 w-16",
+              scrolled ? "h-16 w-16" : "h-20 w-20",
               "object-contain",
             )}
           />
