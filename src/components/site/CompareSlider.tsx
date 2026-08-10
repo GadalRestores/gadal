@@ -45,7 +45,7 @@ export function CompareSlider({
         dragging.current = true;
         setFromClientX(e.clientX);
       }}
-      className="group relative aspect-[4/3] w-full cursor-ew-resize select-none overflow-hidden rounded-3xl border border-border bg-surface touch-none"
+      className="group relative aspect-[4/5] w-full cursor-ew-resize select-none overflow-hidden rounded-3xl border border-border bg-surface touch-none"
     >
       <img
         src={after}
