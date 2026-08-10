@@ -27,8 +27,9 @@ export function Reviews() {
         <SectionHeading
           eyebrow="Reviews"
           title="Drivers across Bucks, Philly and South Jersey."
-          description="Placeholder reviews shown while Google reviews are being connected."
+          description="Real 5-star Google reviews from Gadal Restores customers."
         />
+
 
         <Reveal className="mt-14">
           <Carousel opts={{ align: "start", loop: true }}>

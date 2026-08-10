@@ -170,41 +170,28 @@ export const benefits = [
 
 export const reviews = [
   {
-    name: "Marcus D.",
-    location: "Levittown, PA",
+    name: "Dom",
+    location: "Doylestown, PA",
     rating: 5,
     quote:
-      "My headlights were completely yellow. He came to my driveway and they came out looking brand new. Night driving is a different experience now.",
+      "I made the poor decision of trying the Repel Insect Repellent Spray as seen on IG (SMH). It made the headlights worst than they originally were. Thankfully, I called Gadal. Communication was great, punctual, and quality of work is top tier at a great price. I definitely recommend his services.",
   },
   {
-    name: "Alyssa R.",
+    name: "Bruce",
     location: "Philadelphia, PA",
     rating: 5,
     quote:
-      "Booked in the morning, done before lunch. He explained the sanding process step by step and the results speak for themselves.",
+      "Gadal made my 20 year old headlights look nearly new again. He also restored my fog lamps at no extra cost because he felt they needed be done. He even comes to your location. So, don't buy new or replacement headlights before giving Gadal an opportunity to restore yours first. Excellent work, excellent price.",
   },
   {
-    name: "Tony P.",
-    location: "Cherry Hill, NJ",
+    name: "Carole",
+    location: "Burlington, NJ",
     rating: 5,
     quote:
-      "I was quoted over $900 for new assemblies. This cost a fraction of that and honestly looks just as good.",
-  },
-  {
-    name: "Danielle K.",
-    location: "Bensalem, PA",
-    rating: 5,
-    quote:
-      "Professional, on time and careful with the paint around the lenses. Did my foglights too. Highly recommend.",
-  },
-  {
-    name: "Jordan M.",
-    location: "Bristol, PA",
-    rating: 5,
-    quote:
-      "Truck lenses were badly hazed. The difference is night and day and the emblems came out mirror clean.",
+      "Gadal was very nice and professional. He showed up on time. He took before and after photos and the differences truly amazing. I would highly recommend Gadal.",
   },
 ];
+
 
 export const faqs = [
   {
