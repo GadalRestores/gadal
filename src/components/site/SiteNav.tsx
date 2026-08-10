@@ -91,7 +91,7 @@ export function SiteNav() {
       </div>
 
       {open ? (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-background/97 px-6 pb-10 pt-24 backdrop-blur-xl xl:hidden">
+        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-background px-6 pb-10 pt-24 backdrop-blur-xl xl:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {navLinks.map((link, i) => (
               <a
