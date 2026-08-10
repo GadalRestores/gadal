@@ -13,9 +13,9 @@ export function SiteFooter() {
                 src="/gadal-logo.png"
                 alt=""
                 loading="lazy"
-                width={36}
-                height={36}
-                className="h-9 w-9 object-contain"
+                width={64}
+                height={64}
+                className="h-16 w-16 object-contain"
               />
               <span className="font-display text-base font-bold uppercase tracking-[0.18em]">
                 Gadal <span className="text-primary">Restores</span>
