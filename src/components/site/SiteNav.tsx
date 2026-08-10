@@ -33,11 +33,11 @@ export function SiteNav() {
           <img
             src="/gadal-logo.png"
             alt=""
-            width={40}
-            height={40}
+            width={72}
+            height={72}
             className={cn(
               "transition-all duration-500",
-              scrolled ? "h-8 w-8" : "h-10 w-10",
+              scrolled ? "h-12 w-12" : "h-16 w-16",
               "object-contain",
             )}
           />

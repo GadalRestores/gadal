@@ -24,9 +24,9 @@ export function Hero() {
         <img
           src="/gadal-logo.png"
           alt={`${business.name} logo`}
-          width={112}
-          height={112}
-          className="mx-auto h-20 w-20 object-contain drop-shadow-[0_0_28px_oklch(0.85_0.23_130/0.45)] sm:h-28 sm:w-28"
+          width={288}
+          height={288}
+          className="mx-auto h-40 w-40 object-contain drop-shadow-[0_0_28px_oklch(0.85_0.23_130/0.45)] sm:h-56 sm:w-56 lg:h-64 lg:w-64"
         />
         <h1 className="mt-8 text-balance font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
           Clarity Restored, <span className="text-primary">Safety Secured.</span>
