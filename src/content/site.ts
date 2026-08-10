@@ -3,12 +3,12 @@
  * Update text, pricing, reviews, FAQs and gallery items in this one file.
  */
 
-import headlightBefore from "@/assets/headlight-before.jpg";
-import headlightAfter from "@/assets/headlight-after.jpg";
-import foglightBefore from "@/assets/foglight-before.jpg";
-import foglightAfter from "@/assets/foglight-after.jpg";
-import emblemBefore from "@/assets/emblem-before.jpg";
-import emblemAfter from "@/assets/emblem-after.jpg";
+import headlightBefore from "@/assets/headlight-before-real.jpg.asset.json";
+import headlightAfter from "@/assets/headlight-after-real.jpg.asset.json";
+import foglightBefore from "@/assets/foglight-before-real.jpg.asset.json";
+import foglightAfter from "@/assets/foglight-after-real.jpg.asset.json";
+import emblemBefore from "@/assets/emblem-before-real.jpg.asset.json";
+import emblemAfter from "@/assets/emblem-after-real.jpg.asset.json";
 
 export const business = {
   name: "Gadal Restores",
@@ -82,30 +82,23 @@ export const gallery = [
   {
     id: "headlights-sedan",
     category: "Headlights",
-    title: "Sedan Headlight Pair",
-    before: headlightBefore,
-    after: headlightAfter,
+    title: "Sedan Headlight Restoration",
+    before: headlightBefore.url,
+    after: headlightAfter.url,
   },
   {
-    id: "foglights-suv",
+    id: "foglights-coupe",
     category: "Foglights",
-    title: "SUV Foglight Lens",
-    before: foglightBefore,
-    after: foglightAfter,
+    title: "Coupe Headlight & Foglight",
+    before: foglightBefore.url,
+    after: foglightAfter.url,
   },
   {
     id: "emblem-grille",
     category: "Emblems",
     title: "Grille Emblem Refinish",
-    before: emblemBefore,
-    after: emblemAfter,
-  },
-  {
-    id: "headlights-coupe",
-    category: "Headlights",
-    title: "Coupe Projector Lens",
-    before: headlightBefore,
-    after: headlightAfter,
+    before: emblemBefore.url,
+    after: emblemAfter.url,
   },
 ];
 
