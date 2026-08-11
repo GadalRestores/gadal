@@ -2,17 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site/SiteNav";
 import { Hero } from "@/components/site/Hero";
 import { PromiseStrip } from "@/components/site/PromiseStrip";
-import { Services } from "@/components/site/Services";
-import { Pricing } from "@/components/site/Pricing";
 import { Results } from "@/components/site/Results";
 import { Process } from "@/components/site/Process";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Reviews } from "@/components/site/Reviews";
-import { QuoteForm } from "@/components/site/QuoteForm";
-import { Faq } from "@/components/site/Faq";
-import { Contact } from "@/components/site/Contact";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { business, faqs } from "@/content/site";
+
 
 const title = "Gadal Restores | Mobile Headlight Restoration in Bucks County & Philly";
 const description =
@@ -84,15 +80,11 @@ function Index() {
       <main>
         <Hero />
         <PromiseStrip />
-        <Services />
-        <Pricing />
         <Results />
         <Process />
         <WhyUs />
         <Reviews />
-        <QuoteForm />
-        <Faq />
-        <Contact />
+
       </main>
       <SiteFooter />
     </div>
