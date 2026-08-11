@@ -139,10 +139,11 @@ function NavItem({
   children: React.ReactNode;
 }) {
   const isHash = href.startsWith("/#");
+  const hashProps = isHash ? { hash: href.slice(2) } : {};
   return (
     <Link
       to={(isHash ? "/" : href) as "/"}
-      hash={isHash ? href.slice(2) : undefined}
+      {...hashProps}
       className={className}
       onClick={onClick}
       style={style}
@@ -150,4 +151,5 @@ function NavItem({
       {children}
     </Link>
   );
+
 }
