@@ -31,14 +31,15 @@ export const business = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Before & After", href: "#results" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Before & After", href: "/#results" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
+
 
 export const services = [
   {
