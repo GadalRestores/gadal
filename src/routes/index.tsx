@@ -80,15 +80,11 @@ function Index() {
       <main>
         <Hero />
         <PromiseStrip />
-        <Services />
-        <Pricing />
         <Results />
         <Process />
         <WhyUs />
         <Reviews />
-        <QuoteForm />
-        <Faq />
-        <Contact />
+
       </main>
       <SiteFooter />
     </div>
