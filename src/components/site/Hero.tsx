@@ -37,14 +37,14 @@ export function Hero() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="#quote"
+            href="/contact"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.03] sm:w-auto"
           >
-            Get A Free Instant Quote
+            I Want My Headlights Restored
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
-            href="#results"
+            href="/#results"
             className="inline-flex w-full items-center justify-center rounded-full border border-border px-8 py-4 font-display text-sm font-bold uppercase tracking-wider text-foreground transition-colors duration-300 hover:border-primary hover:text-primary sm:w-auto"
           >
             View Our Results

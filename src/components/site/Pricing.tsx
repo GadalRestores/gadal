@@ -38,7 +38,7 @@ export function Pricing() {
                 <p className="mt-7 font-display text-5xl font-bold text-primary">${tier.price}</p>
                 <p className="mt-2 text-sm text-muted-foreground">Full headlight restoration</p>
                 <a
-                  href="#quote"
+                  href="/contact"
                   className={cn(
                     "mt-8 rounded-full px-5 py-3 text-center font-display text-xs font-bold uppercase tracking-wider transition-transform duration-300 hover:scale-[1.03]",
                     tier.featured
@@ -76,7 +76,7 @@ export function Pricing() {
                 Not sure which tier fits your vehicle? Send a photo and we'll price it exactly.
               </p>
               <a
-                href="#quote"
+                href="/contact"
                 className="mt-4 inline-flex rounded-full bg-primary px-6 py-3 font-display text-xs font-bold uppercase tracking-wider text-primary-foreground transition-transform duration-300 hover:scale-[1.03]"
               >
                 Request a custom quote

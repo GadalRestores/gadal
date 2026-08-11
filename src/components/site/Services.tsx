@@ -32,7 +32,7 @@ export function Services() {
                   {service.description}
                 </p>
                 <a
-                  href="#quote"
+                  href="/contact"
                   className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary"
                 >
                   {service.cta}

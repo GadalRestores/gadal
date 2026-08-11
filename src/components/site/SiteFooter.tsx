@@ -64,7 +64,7 @@ export function SiteFooter() {
               ))}
               <li>
                 <a
-                  href="#quote"
+                  href="/contact"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   Quote
@@ -99,7 +99,7 @@ export function SiteFooter() {
             <p className="mt-5 text-sm text-muted-foreground">{business.hours.days}</p>
             <p className="text-sm font-medium text-foreground">{business.hours.time}</p>
             <a
-              href="#quote"
+              href="/contact"
               className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-display text-xs font-bold uppercase tracking-wider text-primary-foreground transition-transform duration-300 hover:scale-[1.03]"
             >
               Get a free quote
