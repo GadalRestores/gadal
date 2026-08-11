@@ -44,10 +44,14 @@ export function Results() {
       </div>
 
       <Reveal className="mt-12">
-        <Carousel opts={{ align: "start", loop: items.length > 1 }} className="w-full">
-          <CarouselContent className="-ml-5">
+        <Carousel
+          orientation="vertical"
+          opts={{ align: "start", loop: items.length > 1 }}
+          className="w-full"
+        >
+          <CarouselContent className="-mt-5 h-[560px] lg:h-[720px]">
             {items.map((item) => (
-              <CarouselItem key={item.id} className="pl-5 lg:basis-1/2">
+              <CarouselItem key={item.id} className="pt-5 basis-full">
                 <CompareSlider before={item.before} after={item.after} alt={item.title} />
                 <div className="mt-4 flex items-center justify-between">
                   <p className="font-display text-base font-semibold">{item.title}</p>
@@ -58,10 +62,11 @@ export function Results() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-3 hidden border-border bg-surface text-foreground hover:bg-primary hover:text-primary-foreground lg:flex" />
-          <CarouselNext className="-right-3 hidden border-border bg-surface text-foreground hover:bg-primary hover:text-primary-foreground lg:flex" />
+          <CarouselPrevious className="-top-3 left-1/2 hidden -translate-x-1/2 border-border bg-surface text-foreground hover:bg-primary hover:text-primary-foreground lg:flex" />
+          <CarouselNext className="-bottom-3 left-1/2 hidden -translate-x-1/2 border-border bg-surface text-foreground hover:bg-primary hover:text-primary-foreground lg:flex" />
         </Carousel>
       </Reveal>
+
     </section>
   );
 }
