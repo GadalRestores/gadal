@@ -37,7 +37,7 @@ export function Reviews() {
               {reviews.map((review) => (
                 <CarouselItem key={review.name} className="pl-5 sm:basis-1/2 lg:basis-1/3">
                   <figure className="flex h-full flex-col rounded-3xl border border-border bg-background/70 p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/40">
-                    <Quote className="h-7 w-7 text-primary/60" aria-hidden="true" />
+                    <Quote className="h-7 w-7 text-brand-red/70" aria-hidden="true" />
                     <blockquote className="mt-5 flex-1 text-sm leading-relaxed text-foreground/90">
                       "{review.quote}"
                     </blockquote>
