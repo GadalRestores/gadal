@@ -81,9 +81,10 @@ function Index() {
         <Hero />
         <PromiseStrip />
         <Results />
+        <Reviews />
         <Process />
         <WhyUs />
-        <Reviews />
+
 
       </main>
       <SiteFooter />
