@@ -18,6 +18,8 @@ export function Hero() {
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(120%_90%_at_50%_10%,transparent,oklch(0.13_0.008_150/0.72)_45%,oklch(0.13_0.008_150)_88%)]" />
+      <div className="pointer-events-none absolute -left-24 top-1/3 -z-10 h-72 w-72 rounded-full bg-brand-red/20 blur-[120px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-24 bottom-1/4 -z-10 h-64 w-64 rounded-full bg-brand-red/15 blur-[120px]" aria-hidden="true" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-52 bg-gradient-to-t from-background to-transparent" />
 
       <div className="mx-auto w-full max-w-4xl px-5 pb-24 pt-36 text-center lg:px-8">
@@ -31,6 +33,7 @@ export function Hero() {
         <h1 className="mt-8 text-balance font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
           Clarity Restored, <span className="text-primary">Safety Secured.</span>
         </h1>
+        <span className="mx-auto mt-6 block h-[3px] w-24 rounded-full bg-brand-red shadow-[var(--glow-red)]" aria-hidden="true" />
         <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
           {business.subheadline}
         </p>
@@ -57,7 +60,7 @@ export function Hero() {
               key={badge}
               className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-foreground sm:text-sm"
             >
-              <Check className="h-4 w-4 text-primary" aria-hidden="true" />
+              <Check className="h-4 w-4 text-brand-red" aria-hidden="true" />
               {badge}
             </li>
           ))}

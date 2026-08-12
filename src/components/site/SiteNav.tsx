@@ -48,7 +48,7 @@ export function SiteNav() {
               scrolled ? "text-sm" : "text-base",
             )}
           >
-            Gadal <span className="text-primary">Restores</span>
+            Gadal <span className="text-brand-red">Restores</span>
           </span>
         </Link>
 

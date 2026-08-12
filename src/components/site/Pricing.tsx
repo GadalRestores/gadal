@@ -27,7 +27,7 @@ export function Pricing() {
                 )}
               >
                 {tier.featured ? (
-                  <span className="absolute right-5 top-5 rounded-full bg-primary px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
+                  <span className="absolute right-5 top-5 rounded-full bg-brand-red px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest text-foreground shadow-[var(--glow-red)]">
                     Most Booked
                   </span>
                 ) : null}
@@ -56,7 +56,7 @@ export function Pricing() {
         <Reveal className="mt-8">
           <div className="grid gap-6 rounded-3xl border border-border bg-background/60 p-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <h3 className="font-display text-sm uppercase tracking-[0.22em] text-primary">
+              <h3 className="font-display text-sm uppercase tracking-[0.22em] text-brand-red">
                 Additional Services
               </h3>
               <ul className="mt-5 grid gap-4 sm:grid-cols-3">
