@@ -14,7 +14,7 @@ export function Process() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="The Process"
-          title="Six stages. No shortcuts."
+          title="Five stages. No shortcuts."
           description="This is what separates a real restoration from a wipe-on product that fades in a few months."
         />
 
