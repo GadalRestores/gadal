@@ -24,9 +24,9 @@ export const business = {
   social: {
     facebook: {
       label: "Gadal's Headlight Restoration",
-      url: "https://www.facebook.com/",
+      url: "https://www.facebook.com/share/1E7NA8LJV9/",
     },
-    instagram: { label: "@GadalRestores", url: "https://www.instagram.com/gadalrestores" },
+    instagram: { label: "@GadalRestores", url: "https://www.instagram.com/gadal_restores" },
   },
 };
 
