@@ -26,7 +26,9 @@ export function SiteNav() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "glass py-2 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)]" : "py-5",
+        scrolled
+          ? "border-b border-border bg-background/90 py-2 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.9)]"
+          : "py-5",
       )}
     >
       <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
@@ -92,7 +94,7 @@ export function SiteNav() {
       </div>
 
       {open ? (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-background px-6 pb-10 pt-24 backdrop-blur-xl xl:hidden">
+        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-background/90 px-6 pb-10 pt-24 backdrop-blur-xl xl:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {navLinks.map((link, i) => (
               <NavItem
