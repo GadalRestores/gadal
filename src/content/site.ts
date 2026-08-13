@@ -113,13 +113,8 @@ export const processSteps = [
   },
   {
     step: "02",
-    title: "Professional Wet Sanding",
-    description: "Oxidation is physically removed with wet sanding — never masked with a wipe-on liquid.",
-  },
-  {
-    step: "03",
-    title: "Progressive Refinement",
-    description: "Successively finer grits erase the previous sanding marks and flatten the surface.",
+    title: "Professional Sanding",
+    description: "Oxidation is physically removed with sanding — never masked with a wipe-on liquid.",
   },
   {
     step: "04",
@@ -134,7 +129,7 @@ export const processSteps = [
   {
     step: "06",
     title: "Final Inspection",
-    description: "Clarity, edges and output are checked in person before the job is signed off.",
+    description: "Headlights are assessed for optimal clarity. The project area is cleaned, and photos are taken for later delivery to the customer.",
   },
 ];
 
