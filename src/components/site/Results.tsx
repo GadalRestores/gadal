@@ -49,10 +49,12 @@ export function Results() {
           opts={{ align: "start", loop: items.length > 1 }}
           className="w-full"
         >
-          <CarouselContent className="-mt-5 h-[560px] lg:h-[720px]">
+          <CarouselContent className="-mt-5 h-[560px] lg:h-[520px]">
             {items.map((item) => (
               <CarouselItem key={item.id} className="pt-5 basis-full">
-                <CompareSlider before={item.before} after={item.after} alt={item.title} />
+                <div className="lg:mx-auto lg:max-w-2xl">
+                  <CompareSlider before={item.before} after={item.after} alt={item.title} />
+                </div>
                 <div className="mt-4 flex items-center justify-between">
                   <p className="font-display text-base font-semibold">{item.title}</p>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground">
