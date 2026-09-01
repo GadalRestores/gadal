@@ -49,7 +49,7 @@ export function Results() {
           opts={{ align: "start", loop: items.length > 1 }}
           className="w-full"
         >
-          <CarouselContent className="-mt-5 h-[560px] lg:h-[520px]">
+          <CarouselContent className="-mt-5 h-[560px] lg:h-[900px]">
             {items.map((item) => (
               <CarouselItem key={item.id} className="pt-5 basis-full">
                 <div className="lg:mx-auto lg:max-w-2xl">
