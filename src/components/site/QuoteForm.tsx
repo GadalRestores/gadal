@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { z } from "zod";
 import { Check, Loader2, Upload } from "lucide-react";
 import { toast } from "sonner";
@@ -16,10 +17,7 @@ const quoteSchema = z.object({
     .max(20)
     .regex(/^[0-9()+\-.\s]+$/, "Enter a valid phone number"),
   email: z.string().trim().email("Enter a valid email address").max(255),
-  zip: z
-    .string()
-    .trim()
-    .regex(/^\d{5}$/, "Enter a 5-digit ZIP code"),
+  zip: z.string().trim().regex(/^\d{5}$/, "Enter a 5-digit ZIP code"),
   message: z.string().trim().max(1000, "Message must be under 1000 characters").optional(),
 });
 
@@ -35,9 +33,11 @@ const fields = [
 
 export function QuoteForm() {
   const [errors, setErrors] = useState<Errors>({});
-  const [photos, setPhotos] = useState<string[]>([]);
-  const [submitting, setSubmitting] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [photos, setPhotos] = useState<File[]>([]);
+  const [formspreeState, handleFormspreeSubmit] = useForm("xyegonkd");
+
+  const submitting = formspreeState.submitting;
+  const succeeded = formspreeState.succeeded;
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,29 +56,49 @@ export function QuoteForm() {
     }
 
     setErrors({});
-    setSubmitting(true);
-    const v = parsed.data;
-    const body = [
-      `Name: ${v.firstName} ${v.lastName}`,
-      `Phone: ${v.phone}`,
-      `Email: ${v.email}`,
-      `ZIP: ${v.zip}`,
-      `Photos ready to attach: ${photos.length}`,
-      "",
-      v.message ? `Message: ${v.message}` : "Message: (none)",
-    ].join("\n");
+    handleFormspreeSubmit(event);
+  }
 
-    window.location.href = `mailto:${business.email}?subject=${encodeURIComponent(
-      `Quote request — ${v.firstName} ${v.lastName}`,
-    )}&body=${encodeURIComponent(body)}`;
+  function resetForm() {
+    const form = document.getElementById("quote-form") as HTMLFormElement | null;
+    if (form) form.reset();
+    setPhotos([]);
+  }
 
-    window.setTimeout(() => {
-      setSubmitting(false);
-      setSent(true);
-      form.reset();
-      setPhotos([]);
-      toast.success("Quote request ready to send — attach your photos and hit send.");
-    }, 700);
+  if (succeeded) {
+    return (
+      <section
+        id="quote"
+        className="relative scroll-mt-28 overflow-hidden py-24 lg:py-32"
+        aria-labelledby="quote-heading"
+      >
+        <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
+        <div className="mx-auto max-w-3xl px-5 lg:px-8">
+          <Reveal className="text-center">
+            <div className="glass rounded-[2rem] p-10 shadow-[var(--shadow-luxe)]">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
+                <Check className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="mt-6 text-2xl font-bold sm:text-3xl">Quote request sent!</h2>
+              <p className="mt-3 text-sm text-muted-foreground">
+                We received your details and will reply with an exact price shortly. If you
+                attached photos, we&apos;ll review them as part of your quote.
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  resetForm();
+                  window.location.reload();
+                }}
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-display text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.02]"
+              >
+                Send another request
+              </button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -95,13 +115,14 @@ export function QuoteForm() {
             Tell us about your vehicle.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Send a couple of photos of your lenses and you'll get an exact price — no street address
-            needed.
+            Send a couple of photos of your lenses and you&apos;ll get an exact price — no street
+            address needed.
           </p>
         </Reveal>
 
         <Reveal className="mt-12">
           <form
+            id="quote-form"
             onSubmit={handleSubmit}
             noValidate
             className="glass rounded-[2rem] p-6 shadow-[var(--shadow-luxe)] sm:p-10"
@@ -132,6 +153,12 @@ export function QuoteForm() {
                       {errors[field.name]}
                     </p>
                   ) : null}
+                  <ValidationError
+                    prefix={field.label}
+                    field={field.name}
+                    errors={formspreeState.errors}
+                    className="mt-1.5 text-xs text-destructive"
+                  />
                 </div>
               ))}
             </div>
@@ -150,6 +177,12 @@ export function QuoteForm() {
                 maxLength={1000}
                 placeholder="Year, make, model and what you'd like restored."
                 className="w-full resize-none rounded-xl border border-border bg-background/60 px-4 py-3.5 text-sm outline-none transition-colors duration-300 placeholder:text-muted-foreground/60 focus:border-primary"
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={formspreeState.errors}
+                className="mt-1.5 text-xs text-destructive"
               />
             </div>
 
@@ -173,18 +206,18 @@ export function QuoteForm() {
                   multiple
                   className="sr-only"
                   onChange={(e) =>
-                    setPhotos(Array.from(e.target.files ?? []).map((f) => f.name).slice(0, 8))
+                    setPhotos(Array.from(e.target.files ?? []).slice(0, 8))
                   }
                 />
               </label>
               {photos.length ? (
                 <ul className="mt-3 flex flex-wrap gap-2">
-                  {photos.map((name) => (
+                  {photos.map((file) => (
                     <li
-                      key={name}
+                      key={file.name}
                       className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
                     >
-                      {name}
+                      {file.name}
                     </li>
                   ))}
                 </ul>
@@ -197,22 +230,21 @@ export function QuoteForm() {
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.02] disabled:opacity-70"
             >
               {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-              {sent ? "Send another request" : "Get My Free Quote"}
+              Get My Free Quote
             </button>
 
-            {sent ? (
-              <p className="mt-4 flex items-center justify-center gap-2 text-sm text-primary">
-                <Check className="h-4 w-4" /> Your email is ready — attach your photos and send.
-              </p>
-            ) : (
-              <p className="mt-4 text-center text-xs text-muted-foreground">
-                Prefer to talk? Call or text{" "}
-                <a href={business.phoneHref} className="text-primary">
-                  {business.phone}
-                </a>
-                .
-              </p>
-            )}
+            <ValidationError
+              errors={formspreeState.errors}
+              className="mt-4 text-center text-xs text-destructive"
+            />
+
+            <p className="mt-4 text-center text-xs text-muted-foreground">
+              Prefer to talk? Call or text{" "}
+              <a href={business.phoneHref} className="text-primary">
+                {business.phone}
+              </a>
+              .
+            </p>
           </form>
         </Reveal>
       </div>
