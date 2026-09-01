@@ -53,7 +53,7 @@ export function Process() {
           <Reveal className="lg:sticky lg:top-28">
             <img
               src={processImage}
-              alt="Technician wet sanding a headlight lens during a multi-stage restoration"
+              alt="Technician sanding a headlight lens during a multi-stage restoration"
               loading="lazy"
               width={1024}
               height={768}

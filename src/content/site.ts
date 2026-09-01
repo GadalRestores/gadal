@@ -46,7 +46,7 @@ export const services = [
     icon: "headlight",
     title: "Headlight Restoration",
     description:
-      "Faded, oxidized and yellowed lenses are wet sanded through multiple grits, machine polished to optical clarity, then sealed with UV protection.",
+      "Faded, oxidized and yellowed lenses are sanded through multiple grits, machine polished to optical clarity, then sealed with UV protection.",
     cta: "Restore my headlights",
   },
   {
@@ -117,17 +117,17 @@ export const processSteps = [
     description: "Oxidation is physically removed with sanding — never masked with a wipe-on liquid.",
   },
   {
-    step: "04",
+    step: "03",
     title: "Machine Polishing",
     description: "Compound and polish stages bring the plastic back to true optical clarity.",
   },
   {
-    step: "05",
+    step: "04",
     title: "UV Protection",
     description: "A protective sealant locks in the finish and slows future oxidation.",
   },
   {
-    step: "06",
+    step: "05",
     title: "Final Inspection",
     description: "Headlights are assessed for optimal clarity. The project area is cleaned, and photos are taken for later delivery to the customer.",
   },
