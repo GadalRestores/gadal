@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, MousePointerClick } from "lucide-react";
 import { reviews } from "@/content/site";
 import { Reveal, SectionHeading } from "./Reveal";
 import {
