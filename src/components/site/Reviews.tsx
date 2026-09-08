@@ -29,15 +29,16 @@ export function Reviews() {
           title="Drivers across Bucks, Philly and South Jersey."
           description="Real 5-star Google reviews from Gadal Restores customers."
         />
-        <Reveal className="mt-5">
-          <p className="text-base text-muted-foreground">
+        <Reveal className="mt-6">
+          <p className="text-lg text-muted-foreground lg:text-xl">
             Read more verified reviews on Google —{" "}
             <a
               href="https://Tinyurl.com/GadalReviews"
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1 font-semibold text-brand-blue underline-offset-2 transition-colors hover:text-brand-blue/80 hover:underline"
+              className="group inline-flex items-center gap-2 font-bold text-brand-blue underline-offset-4 transition-colors hover:text-brand-blue/80 hover:underline"
             >
+              <MousePointerClick className="h-5 w-5 animate-pulse lg:h-6 lg:w-6" aria-hidden="true" />
               click <span className="uppercase tracking-wide">here</span> to view our reviews!
             </a>
           </p>
