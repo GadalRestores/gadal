@@ -36,7 +36,7 @@ export const navLinks = [
   { label: "Pricing", href: "/pricing" },
   { label: "Before & After", href: "/#results" },
   { label: "Photo Gallery", href: "/gallery" },
-  { label: "Reviews", href: "/#reviews" },
+  { label: "Reviews", href: "/reviews" },
 
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
