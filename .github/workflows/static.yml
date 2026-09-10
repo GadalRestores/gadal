@@ -48,8 +48,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the built static site, not the entire repository
-          path: './dist'
+          # Upload the built static site (dist/client holds the prerendered HTML + assets)
+          path: './dist/client'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
