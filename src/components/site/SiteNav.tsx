@@ -34,7 +34,7 @@ export function SiteNav() {
       <div className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
         <Link to="/" className="group flex items-center gap-3" aria-label={`${business.name} home`}>
           <img
-            src={`${import.meta.env.BASE_URL}gadal-logo.png`}
+            src="/gadal-logo.png"
             alt=""
             width={72}
             height={72}
