@@ -7,8 +7,8 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
-    // GitHub Pages hosts the site under /gadal/ (repo name). Keep "/" in dev.
-    basepath: import.meta.env.PROD ? "/gadal" : "/",
+    // Served at the domain root on gadalrestores.com.
+    basepath: "/",
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
