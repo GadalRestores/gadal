@@ -8,7 +8,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // GitHub Pages serves projects from a repo-name subpath unless a custom domain is configured.
 // The workflow passes BASE_PATH=/repo-name/; for local dev / Lovable preview it defaults to "/".
-const base = process.env.BASE_PATH || "/";
+const base = process.env["BASE_PATH"] || "/";
 
 export default defineConfig({
   vite: {
