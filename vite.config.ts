@@ -6,10 +6,30 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// GitHub Pages serves projects from a repo-name subpath unless a custom domain is configured.
+// The workflow passes BASE_PATH=/repo-name/; for local dev / Lovable preview it defaults to "/".
+const base = process.env["BASE_PATH"] || "/";
+
 export default defineConfig({
+  vite: {
+    base,
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Static routes to prerender as HTML for GitHub Pages deployment.
+    pages: [
+      { path: "/" },
+      { path: "/services" },
+      { path: "/pricing" },
+      { path: "/faq" },
+      { path: "/contact" },
+      { path: "/gallery" },
+      { path: "/reviews" },
+      { path: "/privacy" },
+      { path: "/terms" },
+    ],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
 });

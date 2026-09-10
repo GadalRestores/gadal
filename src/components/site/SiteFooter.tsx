@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src="/gadal-logo.png"
+                src={`${import.meta.env.BASE_URL}gadal-logo.png`}
                 alt=""
                 loading="lazy"
                 width={64}
