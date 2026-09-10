@@ -1,0 +1,1 @@
+import{m as e}from"./index-p1Y7PLGx.js";import{t}from"./SiteFooter-BNI9CFQ6.js";import{t as n}from"./Reviews-CpiVtaBu.js";import{i as r}from"./Reveal-C_GEVOO3.js";var i=e();function a(){return(0,i.jsxs)(`div`,{className:`min-h-screen bg-background`,children:[(0,i.jsx)(r,{}),(0,i.jsx)(`main`,{className:`pt-24`,children:(0,i.jsx)(n,{})}),(0,i.jsx)(t,{})]})}export{a as component};

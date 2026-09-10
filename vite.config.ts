@@ -6,10 +6,31 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// GitHub Pages serves this repo at https://<user>.github.io/gadal/ from the
+// "main" branch root folder, so every asset and route lives under /gadal/.
+const pages = [
+  { path: "/" },
+  { path: "/services" },
+  { path: "/pricing" },
+  { path: "/gallery" },
+  { path: "/reviews" },
+  { path: "/faq" },
+  { path: "/contact" },
+  { path: "/privacy" },
+  { path: "/terms" },
+];
+
 export default defineConfig({
+  vite: {
+    base: "/gadal/",
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Every route is fully static (no per-visitor data), so prerender them all
+    // to plain HTML files that GitHub Pages can serve without a server.
+    pages,
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
 });

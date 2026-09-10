@@ -24,7 +24,7 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-4xl px-5 pb-24 pt-36 text-center lg:px-8">
         <img
-          src="/gadal-logo.png"
+          src={`${import.meta.env.BASE_URL}gadal-logo.png`}
           alt={`${business.name} logo`}
           width={288}
           height={288}
