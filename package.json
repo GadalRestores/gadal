@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "rm -rf dist node_modules/.nitro && vite build",
-    "build:dev": "rm -rf dist node_modules/.nitro && vite build --mode development",
+    "clean:generated": "rm -rf dist node_modules/.nitro assets contact faq gallery pricing privacy reviews services terms index.html 404.html favicon.png gadal-logo.png photos robots.txt CNAME .nojekyll",
+    "publish:pages": "cp -R dist/client/. . && cp dist/client/index.html 404.html && touch .nojekyll",
+    "build": "bun run clean:generated && vite build && bun run publish:pages",
+    "build:dev": "bun run clean:generated && vite build --mode development && bun run publish:pages",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
