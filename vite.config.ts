@@ -6,8 +6,9 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// GitHub Pages serves this repo at https://<user>.github.io/gadal/ from the
-// "main" branch root folder, so every asset and route lives under /gadal/.
+// The site is served from the custom domain gadalrestores.com at the domain
+// root, so assets and routes live at "/". GitHub Pages redirects the default
+// <user>.github.io/gadal/ URL to the custom domain once it is connected.
 const pages = [
   { path: "/" },
   { path: "/services" },
@@ -22,7 +23,7 @@ const pages = [
 
 export default defineConfig({
   vite: {
-    base: "/gadal/",
+    base: "/",
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
