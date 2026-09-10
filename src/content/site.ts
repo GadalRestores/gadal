@@ -3,12 +3,6 @@
  * Update text, pricing, reviews, FAQs and gallery items in this one file.
  */
 
-import headlightBefore from "@/assets/headlight-before-real.jpg.asset.json";
-import headlightAfter from "@/assets/headlight-after-real.jpg.asset.json";
-import foglightBefore from "@/assets/foglight-before-real.jpg.asset.json";
-import foglightAfter from "@/assets/foglight-after-real.jpg.asset.json";
-import emblemBefore from "@/assets/emblem-before-real.jpg.asset.json";
-import emblemAfter from "@/assets/emblem-after-real.jpg.asset.json";
 
 export const business = {
   name: "Gadal Restores",
@@ -86,22 +80,22 @@ export const gallery = [
     id: "headlights-sedan",
     category: "Headlights",
     title: "Sedan Headlight Restoration",
-    before: headlightBefore.url,
-    after: headlightAfter.url,
+    before: "/photos/headlight-before-real.jpg",
+    after: "/photos/headlight-after-real.jpg",
   },
   {
     id: "foglights-coupe",
     category: "Foglights",
     title: "Coupe Headlight & Foglight",
-    before: foglightBefore.url,
-    after: foglightAfter.url,
+    before: "/photos/foglight-before-real.jpg",
+    after: "/photos/foglight-after-real.jpg",
   },
   {
     id: "emblem-grille",
     category: "Emblems",
     title: "Grille Emblem Refinish",
-    before: emblemBefore.url,
-    after: emblemAfter.url,
+    before: "/photos/emblem-before-real.jpg",
+    after: "/photos/emblem-after-real.jpg",
   },
 ];
 
