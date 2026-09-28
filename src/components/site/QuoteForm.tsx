@@ -33,7 +33,6 @@ const fields = [
 
 export function QuoteForm() {
   const [errors, setErrors] = useState<Errors>({});
-  const [photos, setPhotos] = useState<File[]>([]);
   const [formspreeState, handleFormspreeSubmit] = useForm("xyegonkd");
 
   const submitting = formspreeState.submitting;
@@ -56,13 +55,12 @@ export function QuoteForm() {
     }
 
     setErrors({});
-    handleFormspreeSubmit(event);
+    handleFormspreeSubmit(parsed.data);
   }
 
   function resetForm() {
     const form = document.getElementById("quote-form") as HTMLFormElement | null;
     if (form) form.reset();
-    setPhotos([]);
   }
 
   if (succeeded) {
@@ -186,42 +184,15 @@ export function QuoteForm() {
               />
             </div>
 
-            <div className="mt-5">
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Photo Upload
+            <div className="mt-5 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border bg-background/40 px-4 py-6 text-center">
+              <Upload className="h-5 w-5 text-primary" aria-hidden="true" />
+              <span className="text-sm text-muted-foreground">
+                Have photos of your lenses? Text them to{" "}
+                <a href={`sms:${business.phone.replace(/[^0-9]/g, "")}`} className="font-semibold text-primary">
+                  {business.phone}
+                </a>{" "}
+                after sending this form.
               </span>
-              <label
-                htmlFor="photos"
-                className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border bg-background/40 px-4 py-8 text-center transition-colors duration-300 hover:border-primary"
-              >
-                <Upload className="h-5 w-5 text-primary" aria-hidden="true" />
-                <span className="text-sm text-muted-foreground">
-                  {photos.length ? `${photos.length} photo(s) selected` : "Add photos of your lenses"}
-                </span>
-                <input
-                  id="photos"
-                  name="photos"
-                  type="file"
-                  accept="image/*"
-                  multiple
-                  className="sr-only"
-                  onChange={(e) =>
-                    setPhotos(Array.from(e.target.files ?? []).slice(0, 8))
-                  }
-                />
-              </label>
-              {photos.length ? (
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {photos.map((file) => (
-                    <li
-                      key={file.name}
-                      className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
-                    >
-                      {file.name}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
             </div>
 
             <button
