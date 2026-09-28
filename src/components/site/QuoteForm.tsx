@@ -187,7 +187,8 @@ export function QuoteForm() {
             <div className="mt-5 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border bg-background/40 px-4 py-6 text-center">
               <Upload className="h-5 w-5 text-primary" aria-hidden="true" />
               <span className="text-sm text-muted-foreground">
-                Have photos of your lenses? Text them to{" "}
+                Have photos of your lenses?{" "}
+                <span className="font-semibold text-foreground">(optional)</span> Text them to{" "}
                 <a href={`sms:${business.phone.replace(/[^0-9]/g, "")}`} className="font-semibold text-primary">
                   {business.phone}
                 </a>{" "}
