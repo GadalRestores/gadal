@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { z } from "zod";
-import { Check, Loader2, Upload } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { business } from "@/content/site";
 import { Reveal } from "./Reveal";
@@ -79,8 +79,7 @@ export function QuoteForm() {
               </div>
               <h2 className="mt-6 text-2xl font-bold sm:text-3xl">Quote request sent!</h2>
               <p className="mt-3 text-sm text-muted-foreground">
-                We received your details and will reply with an exact price shortly. If you
-                attached photos, we&apos;ll review them as part of your quote.
+                We received your details and will reply with an exact price shortly.
               </p>
               <button
                 type="button"
@@ -166,14 +165,14 @@ export function QuoteForm() {
                 htmlFor="message"
                 className="mb-2 block text-xs font-semibold uppercase tracking-widest text-muted-foreground"
               >
-                Message <span className="normal-case tracking-normal">(optional)</span>
+                Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 maxLength={1000}
-                placeholder="Year, make, model and what you'd like restored."
+                placeholder="List Vehicle Year, Make, & Model HERE"
                 className="w-full resize-none rounded-xl border border-border bg-background/60 px-4 py-3.5 text-sm outline-none transition-colors duration-300 placeholder:text-muted-foreground/60 focus:border-primary"
               />
               <ValidationError
@@ -184,17 +183,6 @@ export function QuoteForm() {
               />
             </div>
 
-            <div className="mt-5 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-border bg-background/40 px-4 py-6 text-center">
-              <Upload className="h-5 w-5 text-primary" aria-hidden="true" />
-              <span className="text-sm text-muted-foreground">
-                Have photos of your lenses?{" "}
-                <span className="font-semibold text-foreground">(optional)</span> Text them to{" "}
-                <a href={`sms:${business.phone.replace(/[^0-9]/g, "")}`} className="font-semibold text-primary">
-                  {business.phone}
-                </a>{" "}
-                after sending this form.
-              </span>
-            </div>
 
             <button
               type="submit"
