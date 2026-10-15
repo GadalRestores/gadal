@@ -112,7 +112,7 @@ export function QuoteForm() {
             Tell us about your vehicle.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Send a couple of photos of your lenses and you&apos;ll get an exact price — no street
+            Tell us your vehicle year, make, and model and you&apos;ll get an exact price — no street
             address needed.
           </p>
         </Reveal>
