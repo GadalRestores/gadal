@@ -75,7 +75,7 @@ export function SiteNav() {
             {business.phone}
           </a>
           <Link
-            to="/contact"
+            to="/contact/"
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.04] sm:inline-flex"
           >
             Quote
@@ -109,7 +109,7 @@ export function SiteNav() {
             ))}
           </nav>
           <Link
-            to="/contact"
+            to="/contact/"
             onClick={() => setOpen(false)}
             className="mt-8 rounded-full bg-primary px-6 py-4 text-center font-display text-base font-bold uppercase tracking-wide text-primary-foreground"
           >
