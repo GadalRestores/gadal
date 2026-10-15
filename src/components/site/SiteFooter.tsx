@@ -112,10 +112,10 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {business.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="text-xs text-muted-foreground hover:text-foreground">
+            <Link to="/privacy/" className="text-xs text-muted-foreground hover:text-foreground">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground">
+            <Link to="/terms/" className="text-xs text-muted-foreground hover:text-foreground">
               Terms
             </Link>
           </div>

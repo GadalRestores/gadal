@@ -17,7 +17,7 @@ export const Route = createFileRoute("/terms")({
       { property: "og:url", content: "/terms" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: "/terms/" }],
   }),
   component: TermsPage,
 });
