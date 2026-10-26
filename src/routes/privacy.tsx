@@ -4,7 +4,7 @@ import { business } from "@/content/site";
 
 const title = "Privacy Policy | Gadal Restores";
 const description =
-  "How Gadal Restores collects, uses and protects the information you share when requesting a mobile headlight restoration quote.";
+  "How Gadal Restores collects, uses and protects the information you share when booking a mobile headlight restoration.";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -39,7 +39,7 @@ function PrivacyPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground">Information we collect</h2>
             <p className="mt-2">
-              When you submit a quote request we collect the name, phone number, email address and
+              When you submit a booking request we collect the name, phone number, email address and
               ZIP code you provide, along with any message or photos you choose to send. We do not
               ask for a street address through this website.
             </p>
@@ -54,7 +54,7 @@ function PrivacyPage() {
           <section>
             <h2 className="text-lg font-semibold text-foreground">Photos you send</h2>
             <p className="mt-2">
-              Photos are used to assess lens condition and quote accurately. If we would like to
+              Photos are used to assess lens condition before your appointment. If we would like to
               feature a before-and-after image publicly, we will ask you first.
             </p>
           </section>

@@ -77,9 +77,9 @@ export function QuoteForm() {
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
                 <Check className="h-8 w-8 text-primary" />
               </div>
-              <h2 className="mt-6 text-2xl font-bold sm:text-3xl">Quote request sent!</h2>
+              <h2 className="mt-6 text-2xl font-bold sm:text-3xl">Booking request sent!</h2>
               <p className="mt-3 text-sm text-muted-foreground">
-                We received your details and will reply with an exact price shortly.
+                We received your details and will call you shortly to book your appointment.
               </p>
               <button
                 type="button"
@@ -107,13 +107,13 @@ export function QuoteForm() {
       <div className="pointer-events-none absolute left-1/2 top-0 -z-10 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[140px]" />
       <div className="mx-auto max-w-3xl px-5 lg:px-8">
         <Reveal className="text-center">
-          <p className="eyebrow">Free Instant Quote</p>
+          <p className="eyebrow">Book Your Restoration</p>
           <h2 id="quote-heading" className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
             Tell us about your vehicle.
           </h2>
           <p className="mt-4 text-sm text-muted-foreground">
-            Tell us your vehicle year, make, and model and you&apos;ll get an exact price — no street
-            address needed.
+            Fill out the form with your vehicle year, make, and model and we&apos;ll call you to book
+            your appointment — no street address needed.
           </p>
         </Reveal>
 
@@ -189,7 +189,7 @@ export function QuoteForm() {
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.02] disabled:opacity-70"
             >
               {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-              Get My Free Quote
+              Request a Booking Call
             </button>
 
             <ValidationError

@@ -219,7 +219,7 @@ export const faqs = [
   {
     question: "Can badly cracked or damaged lenses be restored?",
     answer:
-      "Internal cracking or moisture inside the housing can't be fixed by restoration. Send photos with your quote request and we'll tell you honestly what's achievable.",
+      "Internal cracking or moisture inside the housing can't be fixed by restoration. Text us photos when you book and we'll tell you honestly what's achievable.",
   },
 ];
 

@@ -67,7 +67,7 @@ export function SiteFooter() {
                   href="/contact"
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  Quote
+                  Book Now
                 </a>
               </li>
             </ul>
@@ -102,7 +102,7 @@ export function SiteFooter() {
               href="/contact"
               className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-display text-xs font-bold uppercase tracking-wider text-primary-foreground transition-transform duration-300 hover:scale-[1.03]"
             >
-              Get a free quote
+              Book your restoration
             </a>
           </div>
         </div>
