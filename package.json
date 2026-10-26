@@ -7,8 +7,8 @@
     "dev": "vite dev",
     "clean:generated": "rm -rf dist node_modules/.nitro assets contact faq gallery pricing privacy reviews services terms index.html 404.html favicon.png gadal-logo.png photos robots.txt CNAME .nojekyll",
     "publish:pages": "cp -R dist/client/. . && cp dist/client/index.html 404.html && touch .nojekyll",
-    "build": "bun run clean:generated && vite build && bun run publish:pages",
-    "build:dev": "bun run clean:generated && vite build --mode development && bun run publish:pages",
+    "build": "sh -c 'bun run clean:generated && vite build \"$@\" && bun run publish:pages' --",
+    "build:dev": "sh -c 'bun run clean:generated && vite build --mode development \"$@\" && bun run publish:pages' --",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
