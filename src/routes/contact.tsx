@@ -4,9 +4,9 @@ import { QuoteForm } from "@/components/site/QuoteForm";
 import { Contact } from "@/components/site/Contact";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
-const title = "Contact & Free Quote | Gadal Restores";
+const title = "Contact & Book Now | Gadal Restores";
 const description =
-  "Request a free instant quote for mobile headlight, foglight or emblem restoration in Lower Bucks County, Philadelphia and South Jersey.";
+  "Book mobile headlight, foglight or emblem restoration in Lower Bucks County, Philadelphia and South Jersey — fill out the form and we'll call you to schedule.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

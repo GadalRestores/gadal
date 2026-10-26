@@ -73,13 +73,13 @@ export function Pricing() {
             </div>
             <div className="lg:border-l lg:border-border lg:pl-8">
               <p className="max-w-xs text-sm text-muted-foreground">
-                Not sure which tier fits your vehicle? Send a photo and we'll price it exactly.
+                Found your price? Fill out the booking form and we&apos;ll call you to schedule.
               </p>
               <a
                 href="/contact"
                 className="mt-4 inline-flex rounded-full bg-primary px-6 py-3 font-display text-xs font-bold uppercase tracking-wider text-primary-foreground transition-transform duration-300 hover:scale-[1.03]"
               >
-                Request a custom quote
+                Book my restoration
               </a>
             </div>
           </div>

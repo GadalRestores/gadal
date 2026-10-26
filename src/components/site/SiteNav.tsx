@@ -78,7 +78,7 @@ export function SiteNav() {
             to="/contact/"
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-[var(--glow-primary)] transition-transform duration-300 hover:scale-[1.04] sm:inline-flex"
           >
-            Quote
+            Book Now
           </Link>
           <button
             type="button"

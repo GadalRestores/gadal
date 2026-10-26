@@ -36,11 +36,11 @@ function TermsPage() {
 
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted-foreground">
           <section>
-            <h2 className="text-lg font-semibold text-foreground">Quotes and pricing</h2>
+            <h2 className="text-lg font-semibold text-foreground">Pricing</h2>
             <p className="mt-2">
               Prices listed on this site cover a standard multi-stage restoration. Final pricing is
               confirmed after we see the vehicle or clear photos of the lenses. Severe oxidation,
-              damage or non-standard assemblies may affect the quote.
+              damage or non-standard assemblies may affect the final price.
             </p>
           </section>
           <section>
