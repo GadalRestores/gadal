@@ -12,5 +12,6 @@
 ## Deployment rules
 
 - Static GitHub Pages output at repo root is regenerated with `bun run build` (cleans generated root files, prerenders, publishes `dist/client` to root with `404.html` + `.nojekyll`). Why: the site ships as prerendered HTML from the `main` branch root for GitHub Pages + custom domain gadalrestores.com.
+- `build`/`build:dev` scripts wrap their steps in `sh -c '... vite build "$@" ...' --` so extra CLI args go to vite. Why: the Lovable preview builder appends `--config <file>` to the script, which otherwise lands on the trailing `touch` and fails.
 - The router uses `basepath: "/"` and `trailingSlash: "always"`. Why: the Lovable build pins prerender `maxRedirects: 0`, and GitHub Pages serves directory routes with a trailing slash, so trailing-slash requests must return 200 directly instead of redirecting — otherwise prerender only outputs the homepage.
 - Internal `Link to` values and canonical URLs use trailing-slash form (`/services/`). Why: keeps router types valid under `trailingSlash: "always"` and matches the final served URL.
