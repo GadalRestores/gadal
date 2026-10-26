@@ -19,6 +19,9 @@ const quoteSchema = z.object({
   email: z.string().trim().email("Enter a valid email address").max(255),
   zip: z.string().trim().regex(/^\d{5}$/, "Enter a 5-digit ZIP code"),
   message: z.string().trim().max(1000, "Message must be under 1000 characters").optional(),
+  consent: z.literal("yes", {
+    errorMap: () => ({ message: "Please agree to be contacted so we can book your appointment" }),
+  }),
 });
 
 type Errors = Partial<Record<keyof z.infer<typeof quoteSchema>, string>>;
@@ -181,6 +184,29 @@ export function QuoteForm() {
                 errors={formspreeState.errors}
                 className="mt-1.5 text-xs text-destructive"
               />
+            </div>
+
+            <div className="mt-6">
+              <label htmlFor="consent" className="flex cursor-pointer items-start gap-3 text-sm text-muted-foreground">
+                <input
+                  id="consent"
+                  name="consent"
+                  type="checkbox"
+                  value="yes"
+                  aria-invalid={Boolean(errors.consent)}
+                  aria-describedby={errors.consent ? "consent-error" : undefined}
+                  className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer accent-primary"
+                />
+                <span>
+                  I agree to be contacted by Gadal Restores by phone, text or email to book my
+                  appointment.
+                </span>
+              </label>
+              {errors.consent ? (
+                <p id="consent-error" className="mt-1.5 text-xs text-destructive">
+                  {errors.consent}
+                </p>
+              ) : null}
             </div>
 
             <button
